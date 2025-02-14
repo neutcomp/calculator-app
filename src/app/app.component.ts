@@ -1,22 +1,25 @@
-import { Component, input, output } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
-import { ElementComponent } from "./element/element.component";
+import { Component, input, output } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { InputComponent } from './input/input.component';
+import { ResultsComponent } from './results/results.component';
 
 @Component({
-  selector: "app-root",
-  imports: [RouterOutlet, ElementComponent],
-  templateUrl: "./app.component.html",
-  styleUrl: "./app.component.css",
+  selector: 'app-root',
+  imports: [RouterOutlet, HeaderComponent, InputComponent, ResultsComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   close = output<void>();
   fieldNamefirst = input<string>;
   fieldNamesecond = input<string>;
 
-  result = "leeg";
+  result = 'leeg';
 
   calculateScore() {
-    this.result = "gevuld";
+    console.log('hier?');
+    this.result = 'gevuld';
 
     this.close.emit();
   }

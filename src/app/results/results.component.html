@@ -1,0 +1,24 @@
+@if(!getResults().length) {
+<p class="center">No results</p>
+} @else {
+<table>
+	<thead>
+		<th>Year</th>
+		<th>Investment value</th>
+		<th>Interest (Year)</th>
+		<th>Total interest</th>
+		<th>Invested capital</th>
+	</thead>
+	<tbody>
+		@for (result of getResults(); track result.year) {
+		<tr>
+			<td>{{ result.year }}</td>
+			<td>{{ result.investmentValue | currency:'EUR':'symbol':'0.0-0':'nl' }}</td>
+			<td>{{ result.interestYear| currency:'EUR':'symbol':'0.0-0':'nl' }}</td>
+			<td>{{ result.totalInterest| currency:'EUR':'symbol':'0.0-0':'nl' }}</td>
+			<td>{{ result.investedCapital| currency:'EUR':'symbol':'0.0-0':'nl' }}</td>
+		</tr>
+		}
+	</tbody>
+</table>
+}

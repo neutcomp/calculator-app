@@ -1,19 +1,7 @@
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <form (ngSubmit)="calculateScore()">
-        Eerst getal
-        <app-element name="first"></app-element>
-        <br />
-        Tweede getal
-        <app-element name="second"></app-element>
-        <br />
-        <button type="submit">Bereken</button>
-      </form>
+<app-header />
 
-      <span>{{ result }} {{ fieldNamefirst() }} </span>
-    </div>
-  </div>
-</main>
+<app-input />
+<app-results />
+
 
 <router-outlet />
