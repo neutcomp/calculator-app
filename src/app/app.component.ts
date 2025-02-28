@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { InputComponent } from './input/input.component';
@@ -10,17 +10,4 @@ import { ResultsComponent } from './results/results.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  close = output<void>();
-  fieldNamefirst = input<string>;
-  fieldNamesecond = input<string>;
-
-  result = 'leeg';
-
-  calculateScore() {
-    console.log('hier?');
-    this.result = 'gevuld';
-
-    this.close.emit();
-  }
-}
+export class AppComponent {}

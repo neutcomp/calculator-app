@@ -1,7 +1,6 @@
-import { Component, inject, input, output } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ResultsService } from '../results/results.service';
-import type { InputFields } from './input.model';
 
 @Component({
   selector: 'app-input',
@@ -14,8 +13,6 @@ export class InputComponent {
   annualInvestment = '100';
   expectedReturn = '10';
   duration = '10';
-
-  // calculate: InputFields = output();
 
   private resultService = inject(ResultsService);
 
